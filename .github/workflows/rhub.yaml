@@ -55,8 +55,8 @@ jobs:
       - name: install boost on Linux
         if: startsWith(runner.os, 'Linux')
         run: |
-          sudo apt-get -y update
-          sudo apt-get -y install libboost-dev libboost-program-options-dev libboost-system-dev libboost-thread-dev libboost-test-dev
+          apt-get -y update
+          apt-get -y install libboost-dev libboost-program-options-dev libboost-system-dev libboost-thread-dev libboost-test-dev
       - uses: r-hub/rhub2/actions/rhub-check@v1
         with:
           token: ${{ secrets.RHUB_TOKEN }}
